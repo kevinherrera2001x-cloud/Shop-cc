@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop CC - tienda demostrativa">
+  <title>Shop CC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Shop CC</div>
+    <button id="cartButton" class="cart-button" type="button" aria-label="Abrir carrito">
+      🛒 Carrito <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">TIENDA DEMOSTRATIVA</span>
+      <h1>Tarjetas de regalo y prepago</h1>
+      <p>Ejemplo de catálogo para productos que tengas derecho a distribuir.</p>
+    </section>
+
+    <section class="catalog">
+      <h2>Productos</h2>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Tu carrito</h2>
+        <button id="closeCart" class="icon-button" type="button" aria-label="Cerrar">×</button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <p class="empty">Tu carrito está vacío.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="total-row"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+        <button id="checkoutButton" class="primary" type="button">Checkout de demostración</button>
+        <p class="notice">No se realiza ningún cobro. Para producción, conecta un procesador de pagos autorizado.</p>
+      </div>
+    </aside>
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <section class="demo">
+      <span class="eyebrow">DEMO</span>
+      <h2>Checkout listo para integrar</h2>
+      <p>Esta versión es únicamente demostrativa. Para producción, usa el formulario o la tokenización segura de tu proveedor de pagos autorizado.</p>
+      <button id="demoButton" class="secondary" type="button">Finalizar demostración</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Shop CC · Solo productos autorizados · No almacenamos datos completos de tarjetas.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
