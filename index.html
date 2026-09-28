@@ -1,61 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shop CC - tienda demostrativa">
-  <title>Shop CC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Shop CC — Tarjetas autorizadas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Shop CC</div>
-    <button id="cartButton" class="cart-button" type="button" aria-label="Abrir carrito">
-      🛒 Carrito <span id="cartCount">0</span>
-    </button>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#">Shop CC</a>
+      <button id="cartButton" class="cart-button" type="button" aria-label="Abrir carrito">
+        🛒 Carrito <span id="cartCount">0</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <span class="eyebrow">TIENDA DEMOSTRATIVA</span>
-      <h1>Tarjetas de regalo y prepago</h1>
-      <p>Ejemplo de catálogo para productos que tengas derecho a distribuir.</p>
+      <div class="container">
+        <span class="eyebrow">TIENDA DEMOSTRATIVA</span>
+        <h1>Tarjetas de regalo y prepago autorizadas</h1>
+        <p>Catálogo de demostración para productos legítimos de distribuidores autorizados.</p>
+        <a class="primary-button" href="#catalogo">Ver productos</a>
+      </div>
     </section>
 
-    <section class="catalog">
-      <h2>Productos</h2>
-      <div id="products" class="product-grid"></div>
-    </section>
-
-    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
-      <div class="cart-header">
-        <h2>Tu carrito</h2>
-        <button id="closeCart" class="icon-button" type="button" aria-label="Cerrar">×</button>
+    <section id="catalogo" class="container section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CATÁLOGO</span>
+          <h2>Productos de demostración</h2>
+        </div>
+        <p>Usa únicamente productos que tengas derecho a distribuir.</p>
       </div>
-      <div id="cartItems" class="cart-items">
-        <p class="empty">Tu carrito está vacío.</p>
-      </div>
-      <div class="cart-footer">
-        <div class="total-row"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
-        <button id="checkoutButton" class="primary" type="button">Checkout de demostración</button>
-        <p class="notice">No se realiza ningún cobro. Para producción, conecta un procesador de pagos autorizado.</p>
-      </div>
-    </aside>
 
-    <div id="overlay" class="overlay" hidden></div>
-
-    <section class="demo">
-      <span class="eyebrow">DEMO</span>
-      <h2>Checkout listo para integrar</h2>
-      <p>Esta versión es únicamente demostrativa. Para producción, usa el formulario o la tokenización segura de tu proveedor de pagos autorizado.</p>
-      <button id="demoButton" class="secondary" type="button">Finalizar demostración</button>
+      <div id="productGrid" class="product-grid"></div>
     </section>
   </main>
 
-  <footer>
-    © 2026 Shop CC · Solo productos autorizados · No almacenamos datos completos de tarjetas.
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Tu carrito</h2>
+      <button id="closeCart" class="icon-button" type="button" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p class="empty">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button id="checkoutButton" class="checkout-button" type="button">Checkout de demostración</button>
+      <p class="notice">No se realiza ningún cobro. Antes de producción, conecta este botón a un procesador de pagos autorizado.</p>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Shop CC · DEMO · Solo para productos autorizados.</p>
+    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
